@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JomooIMax</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">商城</string>
+    <string name="title_notifications">个人中心</string>
+    <string name="login_phone_thint">请输入手机号码</string>
+    <string name="login_code_thint">请输入验证码</string>
+</resources>

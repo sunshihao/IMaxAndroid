@@ -1,0 +1,195 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.bttomnavi.data.ProfileLiveDataViewModel"/>
+
+<!--        <variable-->
+<!--            name="viewmodel"-->
+<!--            type="com.example.bttomnavi.bean.User"/>-->
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="0dp"
+        android:layout_height="238.5dp"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/bg"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="237dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="61dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/logo"
+        tools:ignore="ContentDescription"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/g_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_tit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="77.5dp"
+            android:layout_marginTop="27.5dp"
+            android:text="手机验证码登录"
+            android:textColor="#ff492f1e"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/back"
+
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="395dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/g_radius_btn_log"
+            android:text="登录"
+            android:textColor="#ffffffff"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="142dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:hint="@string/login_phone_thint"
+            android:inputType="phone"
+            android:lineSpacingExtra="8sp"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLength="11"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/vercode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="232dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:hint="@string/login_code_thint"
+            android:maxLength="6"
+            android:text="@{viewmodel.verCode}"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="35dp"
+            android:text="我已阅读并同意"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@id/vercode" />
+
+        <TextView
+            android:id="@+id/priagreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="《隐私通知》"
+            android:textColor="#1A86E0"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/checkBox"
+            app:layout_constraintLeft_toRightOf="@id/checkBox"
+            app:layout_constraintTop_toBottomOf="@id/vercode"
+
+            />
+
+        <TextView
+            android:id="@+id/seragreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="、《九牧会员自助系统服务协议》"
+            android:textColor="#1A86E0"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/checkBox"
+
+            app:layout_constraintLeft_toRightOf="@id/priagreement"
+            app:layout_constraintTop_toBottomOf="@id/vercode" />
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="#E2B78D"
+            android:textSize="21sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/vercode"
+            app:layout_constraintRight_toRightOf="@id/vercode"
+
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="98dp"
+
+            android:layout_height="87dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="4dp"
+            android:text="@{viewmodel.vercode}"
+
+
+            app:layout_constraintBottom_toBottomOf="@id/checkBox"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
