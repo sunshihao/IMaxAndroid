@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+<!--        <variable-->
+<!--            name="viewmodel"-->
+<!--            type="com.example.bttomnavi.data.ProfileLiveDataViewModel"/>-->
         <variable
             name="viewmodel"
-            type="com.example.bttomnavi.data.ProfileLiveDataViewModel"/>
+            type="com.example.bttomnavi.entity.User"/>
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,7 +117,7 @@
             android:ems="10"
             android:hint="@string/login_code_thint"
             android:maxLength="6"
-            android:text="@{viewmodel.vercode}"
+            android:text="@{viewmodel.firstName}"
             android:textSize="21sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -175,13 +178,10 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="98dp"
-
             android:layout_height="87dp"
             android:layout_marginStart="48dp"
             android:layout_marginBottom="4dp"
-            android:text="@{viewmodel.vercode}"
-
-
+            android:text="@{viewmodel.firstName}"
             app:layout_constraintBottom_toBottomOf="@id/checkBox"
             app:layout_constraintStart_toStartOf="parent" />
 

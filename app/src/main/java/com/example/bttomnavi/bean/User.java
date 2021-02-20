@@ -11,7 +11,7 @@ import com.example.bttomnavi.BR;
 public class User extends BaseObservable {
 
     private String phone;
-    private String verCode;
+    private String vercode;
 
     @Bindable
     public String getPhone() {
@@ -24,13 +24,13 @@ public class User extends BaseObservable {
 
     }
     @Bindable
-    public String getVerCode() {
-        return verCode;
+    public String getVercode() {
+        return vercode;
     }
 
-    public void setVerCode(String verCode) {
-        this.verCode = verCode;
+    public void setVercode(String vercode) {
+        this.vercode = vercode;
         //数据改变时，刷新数据
-        notifyPropertyChanged(BR.verCode);
+        notifyPropertyChanged(BR.vercode);
     }
 }
