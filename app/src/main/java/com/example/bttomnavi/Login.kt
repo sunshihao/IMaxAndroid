@@ -1,30 +1,22 @@
 package com.example.bttomnavi
 
-import android.R
-import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProviders
-import com.example.bttomnavi.bean.User
 import com.example.bttomnavi.data.ProfileLiveDataViewModel
-import com.example.bttomnavi.databinding.ActivityMainBinding
 import com.example.bttomnavi.databinding.LoginBinding
 import com.example.bttomnavi.utils.CountDownTimerUtils
-
 
 /**
  * 用户登录
  * */
 class Login : AppCompatActivity() {
 
-    private lateinit var binding: LoginBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.login)
+        setContentView(R.layout.login)
 //        val btnLogin: Button = findViewById(R.id.btn_login)
         // kotlin进行页面跳转
         // 登录的各种路由行为的跳转 ？ android 自身有特别良好的防二次点击事件
@@ -39,7 +31,7 @@ class Login : AppCompatActivity() {
         // 监听文本域内容 双向绑定数据 致此数据双向绑定的方向全部实现 ，但是感觉上这是一个淘汰的数据绑定模式 而且没有实现所谓的双向绑定 而且出现了
         // **
         val viewModel = ViewModelProviders.of(this).get(ProfileLiveDataViewModel::class.java)
-        val binding: LoginBinding = DataBindingUtil.setContentView(this, R.layout.login)
+        val binding: LoginBinding = DataBindingUtil.setContentView(this, R.layout.login) //
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
         // ***

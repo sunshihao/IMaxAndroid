@@ -14,7 +14,6 @@ import com.example.bttomnavi.R
 
 import com.example.bttomnavi.data.Popularity
 
-
 object BindingAdapters {
     /**
      * A Binding Adapter that is called whenever the value of the attribute `app:popularityIcon`

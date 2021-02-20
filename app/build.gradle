@@ -40,9 +40,9 @@ android {
     dataBinding {
         enabled = true  // 视图绑定需要配置 数据双向绑定配置
     }
-    viewBinding { // 视图绑定说明 2021 说明
-        enabled = true
-    }
+//    viewBinding { // 视图绑定说明 2021 说明
+//        enabled = true
+//    }
 }
 
 dependencies {
